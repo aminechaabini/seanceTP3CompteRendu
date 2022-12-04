@@ -26,7 +26,7 @@ namespace seanceTP3.Controllers
         public IActionResult searchResult(string first_name , string country)
         {
             int id = -1;
-            SQLiteConnection con = new SQLiteConnection(@"Data source=" + System.IO.Path.GetDirectoryName(System.Environment.CurrentDirectory) + "2022 GL3 .NET Framework TP3 - SQLite database.db");
+            SQLiteConnection con = new SQLiteConnection(@"Data source=D:\Documents\TPSGL3\.net\2022 GL3 .NET Framework TP3 - SQLite database.db");
             con.Open();
             SQLiteCommand com = new SQLiteCommand("SELECT * FROM personal_info WHERE first_name = '" + first_name +"' AND country = '"+ country+ "' LIMIT 1", con);
             SQLiteDataReader reader = com.ExecuteReader();

@@ -17,7 +17,7 @@ namespace seanceTP3.Controllers
 
         public IActionResult Index()
         {
-            SQLiteConnection con = new SQLiteConnection(@"Data source=" + System.IO.Path.GetDirectoryName(System.Environment.CurrentDirectory) +"2022 GL3 .NET Framework TP3 - SQLite database.db");
+            SQLiteConnection con = new SQLiteConnection(@"Data source=D:\Documents\TPSGL3\.net\2022 GL3 .NET Framework TP3 - SQLite database.db");
             con.Open();
             SQLiteCommand com = new SQLiteCommand("SELECT * FROM personal_info", con);
             SQLiteDataReader reader = com.ExecuteReader();
